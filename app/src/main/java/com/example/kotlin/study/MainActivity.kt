@@ -35,12 +35,49 @@ class MainActivity : AppCompatActivity() {
         Log.d("MainActivity", "非空值处理 =  " + heat("水"))
         Log.d("MainActivity", "空值处理 =  " + heat(null))
 
-        //demo6
+        //demo6 循环 区间(高斯的那个故事 哈哈 从1加到100)
+        var nums = 1..100//这个是
+        Log.d("MainActivity", "从1加到100  =  " + loopFun(nums))
+        //demo6 循环 区间(步长使用)
+        var stepNum = 1..16//这个是
+        loopSetpFun(stepNum)
 
+        //demo7 list 和map 使用
+        useList();
 
 
         //demo5 可变长参数函数
     }
+
+    private fun useList() {
+        var lists = listOf("one", "two", "three", "four", "five")
+        for (item in lists) {
+            Log.d("MainActivity", "遍历list  =  " +item)
+        }
+    }
+
+
+    /**
+     * 稍微解释下 IntRange 是int 类型的区间
+     */
+    private fun loopFun(nums: IntRange): Int {
+        var result = 0;
+        for (num in nums) {
+            result = result + num
+        }
+
+        return result
+    }
+
+    /**
+     * 区间步长使用
+     */
+    private fun loopSetpFun(nums: IntRange) {
+        for (num in nums step 2) {
+            Log.d("MainActivity", "区间使用步长  =  " + num)
+        }
+    }
+
 
     /**
      * 加上问号代表参数可以为空
