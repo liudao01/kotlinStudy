@@ -6,9 +6,11 @@ import android.util.Log
 import kotlin.math.log
 
 class MainActivity : AppCompatActivity() {
+
+
+
     //   var是一个可变变量，这是一个可以通过重新分配来更改为另一个值的变量。这种声明变量的方式和java中声明变量的方式一样。
     //   val是一个只读变量，这种声明变量的方式相当于java中的final变量。一个val创建的时候必须初始化，因为以后不能被改变。
-
     var sumResult = 0;
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -48,6 +50,8 @@ class MainActivity : AppCompatActivity() {
 
 
         //demo5 可变长参数函数
+
+
     }
 
     private fun useList() {
@@ -85,7 +89,6 @@ class MainActivity : AppCompatActivity() {
      */
     fun heat(str: String?): String {
         return "热" + str
-
     }
 
     fun testString(name: String): String {
