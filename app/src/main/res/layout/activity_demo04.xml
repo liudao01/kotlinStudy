@@ -4,11 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".test.Demo02Activity">
+    tools:context=".test.Demo04Activity">
 
     <TextView
-        android:text="比较与数组"
+        android:text="循环和标签"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 </LinearLayout>
