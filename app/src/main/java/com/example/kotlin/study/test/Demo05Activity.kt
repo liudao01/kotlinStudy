@@ -1,13 +1,18 @@
 package com.example.kotlin.study.test
 
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.example.kotlin.study.R
+import com.example.kotlin.study.test.classdemo2.MyEngine
+import com.example.kotlin.study.test.classdemo2.NetEngine
+import com.example.kotlin.study.test.classdemo2.User
 
 /**
  * 类与对象
  */
 class Demo05Activity : AppCompatActivity() {
+    var TAG = "Demo05Activity"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_demo05)
@@ -18,6 +23,24 @@ class Demo05Activity : AppCompatActivity() {
         person = Person(111)//调用主构造
 
 
+        //使用数据类型
+        var user = User("liu", 18, '1')
+        Log.d(TAG, "打印用户信息 $user")
+
+        var (myNmae, myAge, mySex) = user.copy()
+        Log.d(TAG, "打印用户拷贝信息 myNmae: $myNmae ,myAge: $myAge ,mySex: $mySex")
+
+        var (myname1, _, _) = user.copy()
+        Log.d(TAG, "打印用户拷贝信息  myname1: $myname1 其他用下划线拒收")
+
+        //单例使用object  不会多次创建
+        MyEngine.m()
+        MyEngine.m()
+        MyEngine.m()
+
+        //自己创建一个单例
+        var instance = NetEngine.getInstnce()
+        instance.show()
     }
 }
 
@@ -50,5 +73,5 @@ class Student(id: Int) : Person(id) {
     //lateinit 是懒加载 先不加载  没有赋值 就不能使用
     lateinit var name: String
 
-    var age : Int = 0
+    var age: Int = 0
 }
