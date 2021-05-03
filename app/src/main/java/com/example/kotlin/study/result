@@ -32,3 +32,12 @@ username=liudao01&password=liudao7994
     "errorCode": -1,
     "errorMsg": "账号密码不匹配！"
 }
+
+
+注册
+
+https://www.wanandroid.com/user/register
+
+方法：POST
+参数
+	username,password,repassword
