@@ -1,0 +1,34 @@
+
+登录: https://www.wanandroid.com/user/login
+
+参数
+username=liudao01&password=liudao7994
+
+成功返回值
+{
+    "data": {
+        "admin": false,
+        "chapterTops": [],
+        "coinCount": 0,
+        "collectIds": [],
+        "email": "",
+        "icon": "",
+        "id": 97828,
+        "nickname": "liudao01",
+        "password": "",
+        "publicName": "liudao01",
+        "token": "",
+        "type": 0,
+        "username": "liudao01"
+    },
+    "errorCode": 0,
+    "errorMsg": ""
+}
+
+登录失败返回值
+
+{
+    "data": null,
+    "errorCode": -1,
+    "errorMsg": "账号密码不匹配！"
+}
