@@ -9,15 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".modules.login.Loginctivity"></activity>
-        <activity
-            android:name=".ui.login.LoginActivity"
-            android:label="@string/title_activity_login" /> <!-- <activity android:name=".test.Demo05Activity"></activity> -->
+
+<!--        <activity android:name=".modules.login.Loginctivity" /> &lt;!&ndash; <activity android:name=".test.Demo05Activity"></activity> &ndash;&gt;-->
         <!-- <activity android:name=".test.Demo04Activity"></activity> -->
         <!-- <activity android:name=".test.Demo03Activity"></activity> -->
         <activity android:name=".test.Demo00Activity" /> <!-- <activity android:name=".test.Demo02Activity" /> -->
         <activity android:name=".ListData" /> <!-- <activity android:name=".MainActivity"> -->
-        <activity android:name=".test.Demo05Activity">
+        <activity android:name=".modules.login.Loginctivity">
 
             <!-- <activity android:name=".test.Demo01Activity"> -->
             <intent-filter>
