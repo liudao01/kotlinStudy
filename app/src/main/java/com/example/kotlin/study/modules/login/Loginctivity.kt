@@ -7,7 +7,10 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.kotlin.study.R
 import com.example.kotlin.study.api.WanAndroidApi
 import com.example.kotlin.study.config.Flag
+import com.example.kotlin.study.entity.LoginResponse
 import com.example.kotlin.study.net.APIClent
+import com.example.kotlin.study.net.ApiResponse
+import io.reactivex.Observable
 import io.reactivex.Scheduler
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
@@ -42,9 +45,21 @@ class Loginctivity : AppCompatActivity() {
                                      }
 
                                  })*/
+                    .subscribe(object : ApiResponse<LoginResponse>(this){
+                        override fun success(data: LoginResponse?) {
+                            TODO("Not yet implemented")
+                        }
+
+                        override fun failure(errorMsg: String?) {
+                            TODO("Not yet implemented")
+                        }
+
+                    })
 
             }
         }
     }
 }
+
+
 
