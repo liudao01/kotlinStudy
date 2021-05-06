@@ -43,6 +43,7 @@
         <activity android:name=".test.Demo00Activity" /> <!-- <activity android:name=".test.Demo02Activity" /> -->
         <activity android:name=".ListData" />
         <activity android:name=".MainActivity" />
+        <activity android:name=".modules.register.RegisterActivity" />
         <activity android:name=".modules.login.LoginActivity">
 
             <!-- <activity android:name=".test.Demo01Activity"> -->

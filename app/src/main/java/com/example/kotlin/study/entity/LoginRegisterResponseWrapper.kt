@@ -29,4 +29,4 @@ package com.example.kotlin.study.entity
 }
 
  */
-data class LoginRegisterResponseWarpper<T> (val data: T, val errorcode: Int, val errorMsg: String)
+data class LoginRegisterResponseWrapper<T> (val data: T, val errorcode: Int, val errorMsg: String)

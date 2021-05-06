@@ -8,7 +8,7 @@ import com.example.kotlin.study.config.Flag
 /**
  * Created by liuml on 2021/5/6 12:28
  */
-abstract class BaseActivity<P> : AppCompatActivity() where P : IBasePersenter {
+abstract class BaseActivity<P> : AppCompatActivity() where P : IBasePresenter {
 
     lateinit var presenter: P
 

@@ -12,6 +12,7 @@ import com.example.kotlin.study.config.Flag
 import com.example.kotlin.study.entity.LoginRegisterResponse
 import com.example.kotlin.study.modules.login.inter.LoginPresenter
 import com.example.kotlin.study.modules.login.inter.LoginView
+import com.example.kotlin.study.modules.register.RegisterActivity
 import kotlinx.android.synthetic.main.activity_login.*
 
 /**
@@ -26,6 +27,8 @@ class LoginActivity : BaseActivity<LoginPresenter>(), LoginView {
         login.setOnClickListener(onclickListener)
         username.setText("liudao01")
         password.setText("liudao7994")
+
+        register.setOnClickListener(onclickListener)
     }
 
     var onclickListener = View.OnClickListener {
@@ -37,6 +40,10 @@ class LoginActivity : BaseActivity<LoginPresenter>(), LoginView {
                 Log.d(Flag.TAG, "userName:$name,  userPwd:$pwd")
                 presenter.loginAction(this, name, pwd)
 
+            }
+            R.id.register->{
+                var intent: Intent = Intent(this, RegisterActivity::class.java)
+                startActivity(intent)
             }
         }
     }
