@@ -1,4 +1,4 @@
-package com.xiangxue.common.utils
+package com.ktdemo.common.utils
 
 /**
  * 关于一切：

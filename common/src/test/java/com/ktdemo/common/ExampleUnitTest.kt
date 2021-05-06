@@ -1,4 +1,4 @@
-package com.xiangxue.common
+package com.ktdemo.common
 
 import org.junit.Test
 

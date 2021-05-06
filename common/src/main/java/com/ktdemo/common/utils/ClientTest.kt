@@ -1,4 +1,4 @@
-package com.xiangxue.common.utils
+package com.ktdemo.common.utils
 
 import android.os.Handler
 import android.os.Looper
