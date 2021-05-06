@@ -1,7 +1,7 @@
 package com.example.kotlin.study.api
 
-import com.example.kotlin.study.entity.LoginResponse
-import com.example.kotlin.study.entity.LoginResponseWarpper
+import com.example.kotlin.study.entity.LoginRegisterResponse
+import com.example.kotlin.study.entity.LoginRegisterResponseWarpper
 import io.reactivex.Observable
 import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded
@@ -20,6 +20,6 @@ interface WanAndroidApi {
     fun loginAciton(
         @Field("username") username: String, @Field("password") password: String
     )
-            : Observable<LoginResponseWarpper<LoginResponse>>
+            : Observable<LoginRegisterResponseWarpper<LoginRegisterResponse>>
 
 }

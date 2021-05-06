@@ -4,16 +4,14 @@ import android.content.Context
 import android.util.Log
 import com.example.kotlin.study.LoadingDialog
 import com.example.kotlin.study.config.Flag.TAG
-import com.example.kotlin.study.entity.LoginResponseWarpper
-import io.reactivex.Observable
+import com.example.kotlin.study.entity.LoginRegisterResponseWarpper
 import io.reactivex.Observer
 import io.reactivex.disposables.Disposable
-import okhttp3.Dispatcher
 
 /**
  * Created by liuml on 2021/5/5 20:00
  */
-abstract class ApiResponse<T>(val context: Context) : Observer<LoginResponseWarpper<T>> {
+abstract class ApiResponse<T>(val context: Context) : Observer<LoginRegisterResponseWarpper<T>> {
 
     private var isShow: Boolean = true
 
@@ -44,7 +42,7 @@ abstract class ApiResponse<T>(val context: Context) : Observer<LoginResponseWarp
 
 
     // 上游流下了的数据
-    override fun onNext(t: LoginResponseWarpper<T>) {
+    override fun onNext(t: LoginRegisterResponseWarpper<T>) {
 
         if (t.data == null) {
             // 失败
