@@ -2,6 +2,7 @@ package com.example.kotlin.study.net
 
 import android.content.Context
 import android.util.Log
+import com.example.kotlin.study.LoadingDialog
 import com.example.kotlin.study.config.Flag.TAG
 import com.example.kotlin.study.entity.LoginResponseWarpper
 import io.reactivex.Observable
@@ -37,6 +38,7 @@ abstract class ApiResponse<T>(val context: Context) : Observer<LoginResponseWarp
         if (isShow) {
             //弹出 加载框
             Log.d(TAG, "onSubscribe: 开始分发")
+            LoadingDialog.show(context)
         }
     }
 
@@ -56,7 +58,7 @@ abstract class ApiResponse<T>(val context: Context) : Observer<LoginResponseWarp
     // 上游流下了的错误
     override fun onError(e: Throwable) {
         // 取消加载
-//        LoadingDialog.cancel()
+        LoadingDialog.cancel()
 
         failure(e.message)
     }
@@ -64,7 +66,7 @@ abstract class ApiResponse<T>(val context: Context) : Observer<LoginResponseWarp
     // 停止
     override fun onComplete() {
         // 取消加载
-//        LoadingDialog.cancel()
+        LoadingDialog.cancel()
     }
 
 }

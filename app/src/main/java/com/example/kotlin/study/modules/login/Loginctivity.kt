@@ -47,11 +47,11 @@ class Loginctivity : AppCompatActivity() {
                                  })*/
                     .subscribe(object : ApiResponse<LoginResponse>(this){
                         override fun success(data: LoginResponse?) {
-                            TODO("Not yet implemented")
+                            Log.d(Flag.TAG, "登录成功 ${data.toString()}")
                         }
 
                         override fun failure(errorMsg: String?) {
-                            TODO("Not yet implemented")
+                            Log.d(Flag.TAG, "登录失败 ${errorMsg}")
                         }
 
                     })

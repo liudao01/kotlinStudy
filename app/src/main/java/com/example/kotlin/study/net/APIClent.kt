@@ -4,6 +4,7 @@ import com.example.kotlin.study.config.Flag
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
+import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
 
 /**
@@ -36,9 +37,10 @@ class APIClent {
 
         //初始化retriofit
         var mRetrofit: Retrofit = Retrofit.Builder()
-            .baseUrl(Flag.BASE_URL1)
+            .baseUrl("https://www.wanandroid.com")
             .client(mOkHttpClient)
             .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
+            .addConverterFactory(GsonConverterFactory.create()) // Gson 来解析 --- JavaBean
             .build()
         return mRetrofit.create(apiIntface)
 

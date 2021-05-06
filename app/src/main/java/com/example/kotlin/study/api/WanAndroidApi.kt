@@ -17,8 +17,9 @@ interface WanAndroidApi {
 
     @POST("/user/login")
     @FormUrlEncoded
-    fun  loginAciton(@Field("username") username : String
-                    ,@Field("password") password: String)
-    : Observable<LoginResponseWarpper<LoginResponse>>
+    fun loginAciton(
+        @Field("username") username: String, @Field("password") password: String
+    )
+            : Observable<LoginResponseWarpper<LoginResponse>>
 
 }
