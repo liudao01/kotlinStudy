@@ -14,7 +14,7 @@ class Student(var id: Int, var name: String ,var sex: Char) {
 }
 
 fun main() {
-    val stu =  Student(4545, "Derry", 'M')
+    val stu =  Student(4545, "name", 'M')
 
     val(n1, n2, n3 ,n4) = stu
     println(n1)

@@ -4,13 +4,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/bt_list"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="跳转list" />
 
+    <!-- 这个是 首页的Fragment -->
+    <!--        android:name="androidx.navigation.fragment.NavHostFragment"-->
+    <fragment
+        android:id="@+id/nav_host_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/mobile_navigation" />
 
+    <!-- android:paddingTop="?attr/actionBarSize" 找了好久 -->
+    <!--这个是 底部的菜单 -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="?android:attr/windowBackground"
+        app:menu="@menu/bottom_nav_menu"
+        app:navGraph="@navigation/mobile_navigation" />
 </LinearLayout>
