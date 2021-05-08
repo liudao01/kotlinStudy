@@ -4,11 +4,31 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".modules.me.meFragment">
-
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
     <!-- TODO: Update blank fragment layout -->
     <TextView
+        android:id="@+id/tv_top"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="我的" />
+        android:layout_height="wrap_content"
+        android:text="我的网站" />
 
+    <WebView
+        android:id="@+id/webview_me"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    </LinearLayout>
+    <ProgressBar
+        android:id="@+id/pb"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="10dip"
+        android:indeterminateOnly="false"
+        android:max="100"
+         >
+    </ProgressBar>
 </FrameLayout>

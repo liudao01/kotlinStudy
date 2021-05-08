@@ -52,6 +52,7 @@ class collectFragment : Fragment() {
         //获取数据刷新
         recyclerView.layoutManager = LinearLayoutManager(activity)
 
+        updateData()
         //　TODO Insert　动作
         addData.setOnClickListener {
             val names = arrayOf<String>(
