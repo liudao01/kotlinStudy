@@ -79,10 +79,10 @@ class meFragment : Fragment() {
    inner class WebViewClient: WebChromeClient() {
 
         override fun onProgressChanged(view: WebView?, newProgress: Int) {
-            pb.setVisibility( View.VISIBLE)
-            pb.setProgress(newProgress);
+            pb?.setVisibility( View.VISIBLE)
+            pb?.setProgress(newProgress);
             if(newProgress>=99){
-                pb.setVisibility(View.GONE);
+                pb?.setVisibility(View.GONE);
             }
             super.onProgressChanged(view, newProgress)
         }

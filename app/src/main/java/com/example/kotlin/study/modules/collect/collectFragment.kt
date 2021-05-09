@@ -106,6 +106,7 @@ class collectFragment : Fragment() {
         Log.d(TAG, "onViewCreated: ${list}")
         if (null != list) {
             adapter.allStudents = list
+            //其实这里应该是更新操作 我这图省事直接赋值adapter了
             recyclerView.adapter = adapter
         }
     }
