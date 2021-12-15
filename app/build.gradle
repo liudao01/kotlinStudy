@@ -37,6 +37,7 @@ dependencies {
     implementation 'androidx.annotation:annotation:1.1.0'
     implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.2.0'
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0'
+    //该支持库是一个静态库，你可以以使用或者是不适用于不属于框架API的一部分较老版本的平台或工具类API的API添加到您的Android应用程序。与运行API 14或更高版本的设备兼容。
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
@@ -50,8 +51,8 @@ dependencies {
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.2'
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.2'
 
-    implementation 'com.facebook.stetho:stetho:1.4.2'
-    implementation 'com.facebook.stetho:stetho-okhttp3:1.4.2'
+//    implementation 'com.facebook.stetho:stetho:1.4.2'
+//    implementation 'com.facebook.stetho:stetho-okhttp3:1.4.2'
 
 
     implementation(["com.squareup.okhttp3:logging-interceptor:$okhttp_version",

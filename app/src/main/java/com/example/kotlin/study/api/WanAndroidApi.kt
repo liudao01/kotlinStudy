@@ -6,6 +6,12 @@ import io.reactivex.Observable
 import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded
 import retrofit2.http.POST
+import retrofit2.http.QueryMap
+
+import retrofit2.http.GET
+
+
+
 
 /**
  * @explain
@@ -27,5 +33,10 @@ interface WanAndroidApi {
     fun registerAction(
         @Field("username") username: String, @Field("password") password: String, @Field("repassword") repassword: String)
             : Observable<LoginRegisterResponseWrapper<LoginRegisterResponse>> // 返回值
+
+
+//    @GET("test")
+//    fun test(@QueryMap options: HashMap<String?, String?>?): Observable<HttpResult?>?
+
 
 }

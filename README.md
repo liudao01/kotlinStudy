@@ -1,7 +1,7 @@
 # kotlinStudy
 kotlin 学习项目
 
-使用技术  kotlin语言 + mvp架构(简单的未全面封装) + room + navigation  实现下面的功能
+使用技术  kotlin语言 + mvp架构(简单封装) + room + navigation  实现下面的功能
 
 主要体验用kotlin开发项目的过程, 很多东西没封装完整.
 
